@@ -6,16 +6,18 @@ public class DeathPlaneController : MonoBehaviour
 {
 	public Transform spawnPoint;
 
-	
-    // Start is called before the first frame update
-    void Start()
+    void onTriggerEnter(Collider other)
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    	if(other.gameObject.CompareTag("Player"))
+    	{
+    		// get a reference to the player's CharacterController
+    		var controller = other.gameObject.GetComponent<CharacterController>();
+    		// turn controller off
+    		controller.enabled = false;
+    		// move the player to the spawnpoint
+    		other.gameObject.transform.position = spawnPoint.position;
+    		// turn controller on
+    		controller.enabled = true;
+    	}
     }
 }
