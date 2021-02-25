@@ -1350,6 +1350,7 @@ GameObject:
   - component: {fileID: 1608233181}
   - component: {fileID: 1608233180}
   - component: {fileID: 1608233179}
+  - component: {fileID: 1608233183}
   m_Layer: 0
   m_Name: DeathPlane
   m_TagString: Untagged
@@ -1365,7 +1366,7 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1608233178}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
@@ -1433,6 +1434,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: -2, y: 0.528, z: -0.018}
+--- !u!114 &1608233183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1608233178}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c88debb97cf14046b6e45be7005ed83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spawnPoint: {fileID: 402989019}
 --- !u!1001 &1692557146
 PrefabInstance:
   m_ObjectHideFlags: 0
