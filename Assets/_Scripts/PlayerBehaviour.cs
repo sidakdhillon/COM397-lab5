@@ -25,6 +25,7 @@ public class PlayerBehaviour : MonoBehaviour
     void Start()
     {
         controller = GetComponent<CharacterController>();
+        miniMap.SetActive(false);
     }
 
     // Update is called once per frame - once every 16.6666ms
@@ -54,10 +55,10 @@ public class PlayerBehaviour : MonoBehaviour
 
         controller.Move(velocity * Time.deltaTime);
 
-        if(Input.GetKeyDown(KeyCode.M))
+        if (Input.GetKeyDown(KeyCode.M))
         {
         	// toggle the Minimap on/off
-        	miniMap.SetActive(miniMap.activeInHierarchy);
+        	miniMap.SetActive(!miniMap.activeInHierarchy);
         }
     }
 
